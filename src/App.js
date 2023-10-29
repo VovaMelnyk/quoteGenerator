@@ -9,14 +9,14 @@ import "./App.css";
 function App() {
   return (
     <QuoteProvider>
-      <Router>
+      <Router basename="/quoteGenerator">
         <div className="App">
           <nav>
             <Link to="/">Quote</Link>
             <Link to="/admin">Admin panel</Link>
           </nav>
           <Routes>
-            <Route path="/" element={<QuoteGenerator />} />
+            <Route path="/" exact element={<QuoteGenerator />} />
             <Route path="/admin" element={<AdminPage />} />
           </Routes>
         </div>
